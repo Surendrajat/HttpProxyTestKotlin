@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">HttpProxyTest Kotlin</string>
+    <string name="text_url">URL</string>
+    <string name="host_url">http://one.airtel.in</string>
+    <string name="text_proxy">PROXY</string>
+    <string name="proxy_url">anonymouse.org:80</string>
+    <string name="text_timeout">timeOut</string>
+    <string name="time_out">30</string>
+    <string name="text_request">REQUEST</string>
+    <string name="empty_text" />
+    <string name="text_response">RESPONSE</string>
+    <string name="text_test">TEST</string>
+</resources>

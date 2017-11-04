@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="xpc.sonu.httpproxytestkotlin.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        tools:ignore="WebViewLayout">
+
+        <TextView
+            android:id="@+id/text_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="25dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="20dp"
+            android:paddingTop="15dp"
+            android:text="@string/text_url" />
+
+        <EditText
+            android:id="@+id/editURL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/text_url"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/text_url"
+            android:ems="10"
+            android:inputType="textUri"
+            android:selectAllOnFocus="false"
+            android:text="@string/host_url" />
+
+        <LinearLayout
+            android:id="@+id/proxy_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editURL"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_proxy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="15dp"
+                android:paddingTop="15dp"
+                android:text="@string/text_proxy" />
+
+            <EditText
+                android:id="@+id/editPROXY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:ems="10"
+                android:inputType="textUri"
+                android:selectAllOnFocus="true"
+                android:text="@string/proxy_url" />
+
+            <EditText
+                android:id="@+id/timeOut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:ems="10"
+                android:hint="@string/text_timeout"
+                android:inputType="textUri"
+                android:selectAllOnFocus="true"
+                android:text="@string/time_out" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_resquest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/proxy_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/text_request" />
+
+        <TextView
+            android:id="@+id/request_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_resquest"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="1dp"
+            android:background="#ffc"
+            android:ems="10"
+            android:text="@string/empty_text" />
+
+        <TextView
+            android:id="@+id/text_responce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/request_header"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="@string/text_response" />
+
+        <TextView
+            android:id="@+id/responce_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/request_header"
+            android:layout_below="@+id/text_responce"
+            android:layout_marginTop="1dp"
+            android:background="#dff"
+            android:ems="10"
+            android:text="@string/empty_text" />
+
+        <WebView
+            android:id="@+id/webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/responce_header" />
+
+        <TextView
+            android:id="@+id/responce_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/request_header"
+            android:layout_below="@+id/webview"
+            android:layout_marginTop="1dp"
+            android:background="#fdf"
+            android:ems="10"
+            android:text="@string/empty_text" />
+
+    </RelativeLayout>
+</ScrollView>
